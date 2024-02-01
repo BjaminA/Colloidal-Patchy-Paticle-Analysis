@@ -63,8 +63,8 @@ double boxl = std::cbrt(n_part/density);
 int max_neighbours = 12;
 
 //read files
-std::ifstream pos_file("../pos_2000.dat");
-std::ifstream ortn_file("../ortn_2000.dat");
+std::ifstream pos_file("../pos.dat");
+std::ifstream ortn_file("../ortn.dat");
 
 //output files
 ofstream CLUSTER_file("CLUSTERS.dat");
