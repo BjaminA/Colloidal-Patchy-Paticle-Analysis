@@ -1,14 +1,14 @@
 Overview
-This Cluster Analysis Program is a comprehensive tool designed for analysing particle clusters in a simulation environment. It reads simulation data, builds a graph representation of particle interactions, and then calculates various metrics such as cluster size, bonding types, and chain properties. The program is especially focused on analyzing clusters based on their geometric and bonding characteristics.
+This Cluster Analysis Program is a comprehensive tool designed for analysing particle clusters in a simulation environment concerning octahedrally functionalised patches with 'Red' bonds corresponding to equatorial bonds and 'Blue' corresponding to axial. It reads simulation data, builds a graph representation of particle interactions, and calculates various metrics such as cluster size, bonding types, and chain properties. The program is especially focused on analyzing clusters based on their geometric and bonding characteristics.
 
 Features
-Graph-Based Representation: Constructs a graph where each particle is a vertex, and edges represent interactions between particles.
+Graph-Based Representation: Constructs a graph where each particle is a vertex, and edges represent particle interactions.
 Cluster Detection: Identifies clusters using a breadth-first search algorithm.
-Chain Analysis: Evaluates each cluster to identify and report the longest sequence of specific bonding types (e.g., blue-blue connections).
+Chain Analysis: Evaluate each cluster to identify and report the longest sequence of specific bonding types (e.g., blue-blue connections).
 Metrics Calculation: Computes various metrics like total edges, proportion of different bond types, average connections, and asphericity.
 Configuration and Usage
 Adjustable Parameters
-The program allows customization of several key parameters:
+The program allows the customisation of several key parameters:
 
 n_part: Number of particles in the simulation.
 n_frames: Number of frames to be analyzed.
@@ -19,14 +19,14 @@ These parameters can be adjusted in the source code to match the simulation's sp
 Input Files
 The program requires two main input files:
 
-pos_2000.dat: Contains the positions of particles.
-ortn_2000.dat: Contains the orientations of particles.
+pos.dat: Contains the positions of particles (x, y, z).
+ortn.dat: Contains the orientations of particles (quaternions).
 Output Files
 The program outputs several files, including:
 
 CLUSTERS.dat: Information about the identified clusters.
-CLUSTER_COLOURS.dat, RED_PROPORTION.dat, BLUE_PROPORTION.dat, REDnBLUE.dat: Metrics related to the types of bonds in the clusters.
-CHAIN_DATA.dat, CHAIN_COUNT.dat: Information about chain-like structures in the clusters.
+CLUSTER_COLOURS.dat, RED_PROPORTION.dat, BLUE_PROPORTION.dat, REDnBLUE.dat: Metrics related to the types of bonds in the clusters corresponding to equatorial or axial patches (red and blue respectively).
+CHAIN_DATA.dat, CHAIN_COUNT.dat: Information about chain-like structures in the clusters (returning quantities relating to the longest axial-axial (blue-blue) path in a cluster).
 Running the Program
 Compile the source code with a C++ compiler supporting C++11 or later. Ensure input files are correctly formatted and placed in the appropriate directory. Execute the compiled program to perform the analysis.
 
