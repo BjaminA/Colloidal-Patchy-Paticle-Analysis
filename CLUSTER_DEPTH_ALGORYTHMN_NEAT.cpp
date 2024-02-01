@@ -54,7 +54,7 @@ struct Cluster {
 };
 
 //instantiate global variables
-constexpr int n_part = 2000, n_frames = 1;
+constexpr int n_part = 2000, n_frames = 5000;
 constexpr double density = 0.5;
 double Lambda = 1.2;
 double Delta = (20 * (M_PI / 180));
