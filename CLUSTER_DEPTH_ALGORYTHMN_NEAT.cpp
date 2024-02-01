@@ -92,12 +92,12 @@ vector<vector<int>> vertex_matrix;
 
 //Create patch position matrix
 void DefineSites(Matrix3DR & PatchSites) {
-  PatchSites.row(0) << 1.0, 0.0, 0.0;
-  PatchSites.row(1) << 0.0, 1.0, 0.0;
-  PatchSites.row(2) << 0.0, 0.0, 1.0;
-  PatchSites.row(3) << -1.0, 0.0, 0.0;
-  PatchSites.row(4) << 0.0, -1.0, 0.0;
-  PatchSites.row(5) << 0.0, 0.0, -1.0;
+  PatchSites.row(0) << 1.0, 0.0, 0.0; //Blue (axial)
+  PatchSites.row(1) << 0.0, 1.0, 0.0; //Red (equatorial)
+  PatchSites.row(2) << 0.0, 0.0, 1.0; //Red (equatorial)
+  PatchSites.row(3) << -1.0, 0.0, 0.0; //Blue (axial)
+  PatchSites.row(4) << 0.0, -1.0, 0.0; //Red (equatorial)
+  PatchSites.row(5) << 0.0, 0.0, -1.0; //Red (equatorial)
 }
 
 //Nearest image convention
